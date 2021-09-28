@@ -1,0 +1,13 @@
+version: '3'
+services:
+  db:
+    image: elasticsearch:2.3.1
+    volumes:
+      - ./tmp/db:/usr/share/elasticsearch/data
+    ports:
+      - 9200:9200
+  cerebro:
+    image: lmenezes/cerebro
+    ports:
+      - 9000:9000
+      
